@@ -9,7 +9,7 @@ export default function NavLink({
   children: any;
   invert?: boolean;
 }) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   let active = "";
   if (invert) {
