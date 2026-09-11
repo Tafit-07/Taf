@@ -1,9 +1,10 @@
 import { Route, Routes, useLocation } from "react-router";
-import Nav from "../components/Nav";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
 import { useEffect } from "react";
 import About from "../pages/About";
+import Nav from "../components/Nav";
+import Cursor from "../components/Cursor";
 
 export default function RoutesRouter() {
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function RoutesRouter() {
   return (
     <div className="p-4">
       <Nav></Nav>
+      <Cursor></Cursor>
       <Routes>
         {locationArray.map((item) => {
           return <Route path={item.path} element={item.element}></Route>;

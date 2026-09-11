@@ -5,6 +5,40 @@
   --color-bg: var(--color-slate-800);
   --color-sec: var(--color-slate-700);
   --color-text: var(--color-slate-100);
+  --color-text-disabled: var(--color-slate-500);
   --color-main: #4544c2;
   --font-JetBrainsMono: "JetBrainsMono Nerd font propo";
+}
+
+* {
+  cursor: none;
+}
+
+.title-1::before {
+  content: "#";
+  font-weight: bold;
+}
+.title-1 {
+  font-size: var(--text-4xl);
+}
+.title-2::before {
+  content: "##";
+  font-weight: bold;
+}
+.title-2 {
+  font-size: var(--text-3xl);
+}
+.title-3::before {
+  content: "###";
+  font-weight: bold;
+}
+.title-3 {
+  font-size: var(--text-2xl);
+}
+.title-4::before {
+  content: "####";
+  font-weight: bold;
+}
+.title-4 {
+  font-size: var(--text-xl);
 }

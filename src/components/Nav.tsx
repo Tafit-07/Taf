@@ -2,22 +2,29 @@ import NavLink from "./NavLink.tsx";
 
 export default function Nav() {
   return (
-    <nav className="border-2 border-sec bg-slate-800 flex justify-between rounded-xl mb-4 p-2">
-      <div className="text-2xl">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/test">Test</NavLink>
-        <NavLink to="/invert">Invert</NavLink>
+    <nav className="flex justify-between  mb-4">
+      <div className="text-3xl">
+        <button className="before:content-['<'] after:content-['/>'] before:text-main after:text-main">
+          TAF_
+        </button>
       </div>
-      <div></div>
+      <div className="text-2xl">
+        <NavLink to="/">HOME</NavLink>
+        <NavLink to="/test">TEST</NavLink>
+        <NavLink to="/invert">INVERT</NavLink>
+      </div>
       <div className="flex flex-row">
-        <NavLink to="/about" invert>
-          About
-        </NavLink>
-        <a className="" href="https://github.com/Tafit-07">
-          <div className="aspect-square h-9 rounded-full relative text-main text-center bg-bg">
-            <div className=" absolute -top-[0.125rem] text-4xl h-9"></div>
+        <NavLink to="/about">ABOUT</NavLink>
+        <div className="">
+          <div className="aspect-square h-9 rounded-full relative text-main bg-bg">
+            <a
+              className=" absolute -top-[0.125rem] text-4xl h-9"
+              href="https://github.com/Tafit-07"
+            >
+              
+            </a>
           </div>
-        </a>
+        </div>
       </div>
     </nav>
   );

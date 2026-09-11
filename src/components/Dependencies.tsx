@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Title from "./Title";
 
 export default function Dependencies() {
   const [packages, setPackages] = useState({});
@@ -12,8 +13,7 @@ export default function Dependencies() {
 
   return (
     <>
-      <h2 className="font-bold text-2xl mb-1 text-main">Installed packages:</h2>
-      <div className="bg-sec h-[2px] w-full"></div>
+      <Title title={2}>Instaled packages</Title>
       <ul className=" mt-1 list-inside">
         {Object.entries(packages).map(([key, value]: [string, unknown], i) => {
           return (
@@ -23,7 +23,7 @@ export default function Dependencies() {
             >
               <a
                 href={`https://www.npmjs.com/package/${key}`}
-                className="before:content-['󰝥'] hover:before:content-[''] before:text-sm hover:text-main hover:italic before:font-icons before:mr-2"
+                className="before:content-[''] hover:before:content-[''] before:text-lg hover:text-main before:font-icons before:mr-2"
               >
                 {key}
               </a>

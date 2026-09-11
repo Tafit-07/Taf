@@ -1,35 +1,32 @@
+import type { ReactNode } from "react";
 import { useNavigate } from "react-router";
 
 export default function NavLink({
   to,
   children,
-  invert,
 }: {
   to: string;
-  children: any;
-  invert?: boolean;
+  children: ReactNode;
 }) {
   const navigate = useNavigate();
 
   let active = "";
-  if (invert) {
-    if (window.location.pathname !== to) {
-      active = "bg-main border-main text-text";
-    } else {
-      active = "border-main";
-    }
+
+  if (window.location.pathname !== to) {
+    active =
+      "before:content-['['] after:content-[']'] before:text-text hover:before:text-text-disabled after:text-text hover:after:text-text-disabled text-text-disabled hover:text-text";
   } else {
-    if (window.location.pathname === to) {
-      active = "bg-main text-text border-main";
-    }
+    active =
+      "before:content-['{'] after:content-['}'] before:text-main after:text-main";
   }
+
   return (
     <>
       <button
         onClick={() => {
           navigate(to);
         }}
-        className={`transition rounded-lg px-1 border-bg border-2 mr-1 last:mr-0 ${active}`}
+        className={`transition last:mr-0 mr-2 ${active}`}
       >
         {children}
       </button>

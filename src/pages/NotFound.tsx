@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router";
+import NavLink from "../components/NavLink";
 
 export default function NotFound() {
-  const navigate = useNavigate();
   const loc = document.location.pathname;
 
   return (
@@ -18,14 +17,7 @@ export default function NotFound() {
             </span>{" "}
             does not exist or has been moved, Try going to the Homepage
           </p>
-          <button
-            className="transition text-main text-center before:content-['['] after:content-[']'] before:no-underline after:no-underline before:text-text after:text-text hover:after:text-main hover:before:text-main hover:underline"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            Go to Homepage
-          </button>
+          <NavLink to="/">Go to Homepage</NavLink>
         </div>
       </div>
     </>
