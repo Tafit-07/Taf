@@ -23,11 +23,11 @@ export default function Dependencies() {
             >
               <a
                 href={`https://www.npmjs.com/package/${key}`}
-                className="before:content-[''] hover:before:content-[''] before:text-lg hover:text-main before:font-icons before:mr-2"
+                className="before:content-[''] transition before:text-lg before:text-ter-blue hover:text-ter-blue before:font-icons before:mr-2"
               >
                 {key}
               </a>
-              <span className="text-sm ml-1 font-normal text-main">
+              <span className="text-sm ml-1 font-normal text-text-disabled">
                 {value as string}
               </span>
             </li>

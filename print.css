@@ -1,0 +1,34 @@
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    /* Chrome, Safari 6 – 15.3, Edge */
+    color-adjust: exact !important;
+    /* Firefox 48 – 96 */
+    print-color-adjust: exact !important;
+    /* Firefox 97+, Safari 15.4+ */
+  }
+
+  @page {
+    size: A4;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  body {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  #page {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #cursor {
+    display: none;
+  }
+}

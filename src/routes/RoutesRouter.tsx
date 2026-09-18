@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import About from "../pages/About";
 import Nav from "../components/Nav";
 import Cursor from "../components/Cursor";
+import Projects from "../pages/Projects";
+import CV from "../pages/CV";
 
 export default function RoutesRouter() {
   const location = useLocation();
@@ -12,6 +14,8 @@ export default function RoutesRouter() {
     { path: "/", name: "Home", element: <Home></Home> },
     { path: "/test", name: "Test", element: <Home></Home> },
     { path: "/about", name: "About", element: <About></About> },
+    { path: "/projects", name: "Projects", element: <Projects></Projects> },
+    { path: "/cv", name: "CV", element: <CV></CV> },
   ];
 
   useEffect(() => {
@@ -28,13 +32,15 @@ export default function RoutesRouter() {
     <div className="p-4">
       <Nav></Nav>
       <Cursor></Cursor>
-      <Routes>
-        {locationArray.map((item) => {
-          return <Route path={item.path} element={item.element}></Route>;
-        })}
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
-      </Routes>
+      <div className="max-w-[74rem] mx-auto">
+        <Routes>
+          {locationArray.map((item) => {
+            return <Route path={item.path} element={item.element}></Route>;
+          })}
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="*" element={<NotFound></NotFound>}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }

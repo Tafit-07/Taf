@@ -1,13 +1,66 @@
+@font-face {
+  font-family: JetBrainsMono;
+  src: url(./src/assets/fonts/Jet/JetBrainsMonoNerdFontPropo-Regular.ttf);
+  font-weight: 100;
+}
+
 @import "tailwindcss";
 
 @theme {
-  --color-bg-dark: var(--color-slate-900);
-  --color-bg: var(--color-slate-800);
-  --color-sec: var(--color-slate-700);
-  --color-text: var(--color-slate-100);
-  --color-text-disabled: var(--color-slate-500);
+  --color-bg-dark: #05080e;
+  --color-bg: #0b1016;
+  --color-sec: #27303c;
+  --color-text: #ddf0f0;
+  --color-text-disabled: #6e8383;
   --color-main: #4544c2;
-  --font-JetBrainsMono: "JetBrainsMono Nerd font propo";
+  --color-ter-red: #f11e53;
+  --color-ter-green: #06d306;
+  --color-ter-yellow: #ffc000;
+  --color-ter-blue: #4544c4;
+  --color-ter-purple: #f31bd6;
+  --color-ter-cyan: #218ac2;
+  --color-ter-white: #ebebeb;
+  --color-ter-black: #181e26;
+  --font-JetBrainsMono: "JetBrainsMono";
+  --animate-scale: scale 4s linear infinite;
+
+  @keyframes scale {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.ter-red {
+  color: #f11e53;
+}
+.ter-green {
+  color: #06d306;
+}
+.ter-yellow {
+  color: #ffc000;
+}
+.ter-blue {
+  color: #4544c2;
+}
+.ter-purple {
+  color: #f31bd6;
+}
+.ter-cyan {
+  color: #218ac2;
+}
+.ter-white {
+  color: var(--color-state-100);
 }
 
 * {

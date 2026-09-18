@@ -1,7 +1,7 @@
 import { useStopwatch } from "react-timer-hook";
 
 export default function Timer() {
-  const birth = new Date(2007, 9, 29, 12, 4);
+  const birth = new Date(2007, 9, 29, 13, 25);
   const now = new Date();
   const stopwatchOffset = new Date();
   stopwatchOffset.setSeconds(
@@ -24,12 +24,12 @@ export default function Timer() {
   return (
     <span className="">
       {years}
-      <span className="text-sm text-main">years</span>, {days % 365}
-      <span className="text-sm text-main">days</span>, {hours % 24}
-      <span className="text-sm text-main">h</span>, {minutes % 60}
-      <span className="text-sm text-main">min</span>, {seconds % 60}
-      <span className="text-sm text-main">s</span>, {age % 1000}
-      <span className="text-sm text-main">ms</span>
+      <span className="text-sm ter-purple">Years</span>, {days % 365}
+      <span className="text-sm ter-blue">Days</span>, {hours % 24}
+      <span className="text-sm ter-yellow">H</span>, {minutes % 60}
+      <span className="text-sm ter-cyan">Min</span>, {seconds % 60}
+      <span className="text-sm ter-green">S</span>, {age % 1000}
+      <span className="text-sm ter-red">MS</span>
     </span>
   );
 }
