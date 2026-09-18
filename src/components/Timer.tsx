@@ -24,12 +24,12 @@ export default function Timer() {
   return (
     <span className="">
       {years}
-      <span className="text-sm ter-purple">Years</span>, {days % 365}
-      <span className="text-sm ter-blue">Days</span>, {hours % 24}
-      <span className="text-sm ter-yellow">H</span>, {minutes % 60}
-      <span className="text-sm ter-cyan">Min</span>, {seconds % 60}
-      <span className="text-sm ter-green">S</span>, {age % 1000}
-      <span className="text-sm ter-red">MS</span>
+      <span className="text-sm">Years</span>, {days % 365}
+      <span className="text-sm">Days</span>, {hours % 24}
+      <span className="text-sm">H</span>, {minutes % 60}
+      <span className="text-sm">Min</span>, {seconds % 60}
+      <span className="text-sm">S</span>, {age % 1000}
+      <span className="text-sm">MS</span>
     </span>
   );
 }

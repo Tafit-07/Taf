@@ -51,17 +51,18 @@ export default function Projects() {
   return (
     <>
       <Title title={1}>Projects</Title>
-      <div>
+      <div className="px-16">
         {projectList.map((project, i) => {
           return (
-            <section key={i} className="mt-4 first:mt-0">
+            <section key={i} className="my-20 first:my-0">
               <div className="flex flex-row items-center">
                 <Title title={2}>{project.title}</Title>
                 <p className="text-3xl font-bold mx-3">|</p>
                 <Typebar types={project.type}></Typebar>
               </div>
-              <ImageCarousel images={project.img}></ImageCarousel>
-
+              <div className="flex justify-center">
+                <ImageCarousel images={project.img}></ImageCarousel>
+              </div>
               <p className="w-fit mt-1">{project.text}</p>
             </section>
           );

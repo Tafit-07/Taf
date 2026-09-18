@@ -42,7 +42,7 @@ export default function Cursor() {
     };
     const scrollEvent = () => {
       setType(cursorTypes.scroll);
-      const st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lst) {
         setDir({ dir: "", mod: 12 });
       } else if (st < lst) {

@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="">
       <section className="flex w-full">
-        <Title title={1}>Title</Title>
+        <Title title={1}>Tijn A Fit</Title>
       </section>
       <section>
         <Title title={2}>About me</Title>

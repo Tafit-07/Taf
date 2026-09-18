@@ -10,10 +10,45 @@
 
   @page {
     size: A4;
+    margin: 0;
   }
 
-  @page {
+  * {
+    max-height: 29.7cm;
+    break-after: avoid;
+    break-inside: avoid;
+    break-before: avoid;
+    overflow: hidden;
+  }
+
+  nav,
+  nav>* {
+    display: none;
+  }
+
+  header,
+  footer,
+  aside,
+  nav,
+  form,
+  iframe,
+  .menu,
+  .hero,
+  .adslot {
+    display: none;
+  }
+
+  #field,
+  #field>div {
+    height: 0px;
+    width: 0px;
+    padding: 0;
     margin: 0;
+    border: none;
+  }
+
+  #buffer {
+    display: none;
   }
 
   body {
@@ -23,6 +58,7 @@
 
   #page {
     position: absolute;
+    z-index: 1000;
     width: 100%;
     top: 0;
     left: 0;

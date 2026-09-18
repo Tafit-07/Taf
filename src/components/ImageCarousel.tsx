@@ -42,8 +42,8 @@ export default function ImageCarousel({
   }, [hover]);
 
   return (
-    <div className="relative w-[40rem] my-2 select-none aspect-16/9">
-      <div className="h-full w-full rounded-lg aspect-16/9 outline-4 flex flex-row overflow-hidden outline-sec">
+    <div className="relative w-full my-2 select-none aspect-16/9">
+      <div className="h-full w-full aspect-16/9 outline-4 flex flex-row overflow-hidden outline-sec">
         {images.map((image, i) => {
           return (
             <img
@@ -64,7 +64,7 @@ export default function ImageCarousel({
       >
         <div className="absolute top-0 flex justify-center w-full">
           <div
-            className={`bg-sec rounded-b-xl w-1/2 p-1 pt-0 transition ${hoverInfo ? "translate-0" : "-translate-y-full"}`}
+            className={`bg-sec rounded-b-xl w-1/2 p-1 px-2 pt-0 transition ${hoverInfo ? "translate-0" : "-translate-y-full"}`}
           >
             <p className="text-sm italic">{images[imageIndex].alt}</p>
           </div>
@@ -76,7 +76,7 @@ export default function ImageCarousel({
         >
           
         </div>
-        <div className="transition -translate-x-1/2 h-full w-1/4 flex flex-col justify-center hover:translate-0">
+        <div className="transition -translate-x-1/2 h-1/3 w-1/4 flex flex-col justify-center hover:translate-0">
           <button
             onClick={() => {
               showPrev();
@@ -104,7 +104,7 @@ export default function ImageCarousel({
             })}
           </div>
         </div>
-        <div className="transition translate-x-1/2 h-full w-1/4 flex flex-col items-end justify-center hover:translate-0">
+        <div className="transition translate-x-1/2 h-1/3 w-1/4 flex flex-col items-end justify-center hover:translate-0">
           <button
             onClick={() => {
               showNext();

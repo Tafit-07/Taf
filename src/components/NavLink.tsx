@@ -24,9 +24,10 @@ export default function NavLink({
     <>
       <button
         onClick={() => {
+          window.scrollTo(0, 0);
           navigate(to);
         }}
-        className={`transition last:mr-0 mr-2 ${active}`}
+        className={`transition last:mr-0 mr-4 ${active}`}
       >
         {children}
       </button>

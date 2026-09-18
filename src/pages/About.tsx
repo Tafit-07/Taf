@@ -4,6 +4,7 @@ import Title from "../components/Title";
 export default function About() {
   return (
     <>
+      <Title title={1}>About this site</Title>
       <Title title={2}>Font</Title>
       <section className="flex flex-col font-medium text-lg text-text align-text-bottom">
         <a
