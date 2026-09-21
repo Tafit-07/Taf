@@ -1,6 +1,7 @@
 import NavLink from "../components/NavLink";
 import { useContext } from "react";
 import { NavContext } from "../App";
+import TypeWriter from "../components/TypeWriter";
 
 export default function NotFound() {
   const loc = document.location.pathname;
@@ -16,8 +17,9 @@ export default function NotFound() {
         <div className="bg-[url(src/assets/Grid-Light.svg)] dark:bg-[url(src/assets/Grid.svg)] h-full"></div>
       </div>
       <div className="flex flex-col items-center relative">
-        <h3 className="-top-29 text-9xl font-bold text-center before:content-['#'] before:text-main">
-          404
+        <h3 className="-top-29 text-9xl font-bold text-center flex">
+          <span className="text-main">#</span>
+          <TypeWriter>404</TypeWriter>
         </h3>
         <p className="text-xl max-w-[48rem] p-4 text-center">
           Location{" "}

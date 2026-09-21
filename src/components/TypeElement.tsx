@@ -7,7 +7,7 @@ export default function TypeElement({ type, i }: { type: string; i: number }) {
   return (
     <div
       key={i}
-      className={`text-2xl ${icons[type].color} ml-2 first:ml-0 select-none relative`}
+      className={`${icons[type].color} mx-1 select-none relative`}
       onMouseOver={() => {
         setHover(true);
       }}

@@ -19,6 +19,7 @@
   --color-dark: #0b1016;
   --color-text-dark: #ddf0f0;
   --color-main: var(--color-ter-blue);
+  --color-main-dark: #1a1b60;
   --color-ter-red: #e61932;
   --color-ter-green: #6ce619;
   --color-ter-yellow: #e6b019;
@@ -30,10 +31,19 @@
   --font-jetbrains: "JetBrainsMono";
   --font-inter: Inter, "JetBrainsMono";
   --animate-scale: scale 6s linear infinite;
+  --animate-blink: blink 1.2s steps(1) infinite;
   --shadow-glass: 0 0 32px #fff;
   --shadow-taf:
     inset 0 1px 4px #ffffff30, 0 3px 6px #00000030, 0 6px 12px #00000015;
   --animate-ping: ping 1.25s infinite;
+
+  @keyframes blink {
+
+    50%,
+    100% {
+      opacity: 0;
+    }
+  }
 
   @keyframes ping {
 
@@ -101,36 +111,16 @@
   cursor: none;
 }
 
-.title-1::before {
-  content: "#";
-  font-weight: bold;
-}
-
 .title-1 {
-  font-size: var(--text-4xl);
-}
-
-.title-2::before {
-  content: "##";
-  font-weight: bold;
+  font-size: var(--text-6xl);
 }
 
 .title-2 {
   font-size: var(--text-3xl);
 }
 
-.title-3::before {
-  content: "###";
-  font-weight: bold;
-}
-
 .title-3 {
   font-size: var(--text-2xl);
-}
-
-.title-4::before {
-  content: "####";
-  font-weight: bold;
 }
 
 .title-4 {

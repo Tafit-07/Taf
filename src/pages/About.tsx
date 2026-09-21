@@ -1,10 +1,13 @@
 import Dependencies from "../components/Dependencies";
 import Title from "../components/Title";
+import TypeWriter from "../components/TypeWriter";
 
 export default function About() {
   return (
     <>
-      <Title title={1}>About this site</Title>
+      <Title title={1}>
+        <TypeWriter>About this site</TypeWriter>
+      </Title>
       <Title title={2}>Font</Title>
       <section className="flex flex-col font-medium text-lg text-text align-text-bottom">
         <a

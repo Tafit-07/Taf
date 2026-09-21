@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { NavContext } from "../App.tsx";
 import { SkillsContext } from "../App.tsx";
 import TaFit from "../assets/TaFit.jpeg";
+import TypeWriter from "../components/TypeWriter.tsx";
+import CVElement from "../components/CVElement.tsx";
 
 export default function Home() {
   const nav = useContext(NavContext);
@@ -14,16 +16,22 @@ export default function Home() {
 
   return (
     <div className="grid grid-cols-8 gap-8">
-      <section className="col-span-8 shadow-taf rounded-2xl p-8 bg-bg-light/50">
+      <section className="col-span-8">
+        <h1 className="hidden">Tijn.a.Fit</h1>
+        <h2 className="text-7xl font-jetbrains font-bold flex">
+          <span className="text-main">#</span>
+          <TypeWriter>Tijn.A.Fit</TypeWriter>
+        </h2>
+      </section>
+      <section className="col-span-8">
         <div className="grid grid-cols-3 gap-8">
           <div>
             <img className="rounded-lg shadow-taf" src={TaFit} alt="Tijn Fit" />
           </div>
           <div className="col-span-2">
             <Title title={2}>About me</Title>
-            <p className="w-fit">Name: Tijn. A. Fit </p>
-            <p className="w-fit">
-              Age: <Timer></Timer>
+            <p className="w-fit font-bold font-jetbrains text-xl">
+              My age <Timer></Timer>
             </p>
             <p className="pt-2">
               I am a goal‑oriented and detail‑focused Web Development student
@@ -67,6 +75,7 @@ export default function Home() {
           );
         })}
       </section>
+      <section className="col-span-8"></section>
     </div>
   );
 }

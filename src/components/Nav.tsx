@@ -21,12 +21,12 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed transition-[top] z-1 w-dvw hover:top-0 ${nav.navHidden ? "hidden" : ""} ${top ? "-top-22" : "top-0"}`}
+      className={`fixed transition-[top] z-100 w-dvw hover:top-0 ${nav.navHidden ? "hidden" : ""} ${top ? "-top-22" : "top-0"}`}
     >
       <div className="relative">
         <div id="buffer" className="absolute translate-y-17 h-18 w-full"></div>
         <div className="w-dvw">
-          <div className="flex justify-between bg-bg-light/70 backdrop-blur-lg p-4 shadow-taf rounded-full my-4 mx-auto max-w-[90rem]">
+          <div className="flex justify-between bg-bg/70 backdrop-blur-lg p-4 shadow-taf rounded-full my-4 mx-auto max-w-[90rem]">
             <div className="text-3xl">
               <button
                 onClick={() => {

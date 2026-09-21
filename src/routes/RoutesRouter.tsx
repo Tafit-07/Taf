@@ -34,7 +34,7 @@ export default function RoutesRouter() {
       <Cursor></Cursor>
       <div
         id="main"
-        className="max-w-[74rem] static min-h-dvh shadow-taf bg-bg/70 backdrop-blur-lg px-32 pt-28 text-lg py-8
+        className="max-w-[74rem] min-h-dvh px-32 pt-28 text-lg py-8
       mx-auto"
       >
         <Routes>

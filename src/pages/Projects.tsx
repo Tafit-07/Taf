@@ -1,67 +1,29 @@
 import Title from "../components/Title";
 import Typebar from "../components/Typebar";
 import ImageCarousel from "../components/ImageCarousel";
+import TypeWriter from "../components/TypeWriter";
+import { ProjectsContext } from "../App";
+import { useContext } from "react";
 
 export default function Projects() {
-  const projectList = [
-    {
-      title: "lorem ipsum",
-      img: [
-        { img: "https://picsum.photos/600/600", alt: "Lorem Picsum 1" },
-        { img: "https://picsum.photos/600/400", alt: "Lorem Picsum 2" },
-        { img: "https://picsum.photos/1200/600", alt: "Lorem Picsum 3" },
-        { img: "https://picsum.photos/1920/1080", alt: "Lorem Picsum 4" },
-        { img: "https://picsum.photos/700/400", alt: "Lorem Picsum 5" },
-      ],
-      type: ["typescript", "react", "tailwind"],
-      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente, 
-      quam quo exercitationem, culpa blanditiis, animi consequatur
-          at vel ratione ipsum facere quibusdam et! Modi totam excepturi
-          voluptates id, vero deleniti ullam obcaecati eius sed, veritatis
-          necessitatibus recusandae, nemo autem neque fugiat quidem reiciendis?
-          Facilis necessitatibus accusamus neque doloremque laborum.`,
-    },
-    {
-      title: "lorem ipsum",
-      img: [
-        { img: "https://picsum.photos/600/400", alt: "Lorem Picsum" },
-        { img: "https://picsum.photos/500/300", alt: "Lorem Picsum" },
-      ],
-      type: ["html", "javascript", "css"],
-      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente, 
-      quam quo exercitationem, culpa blanditiis, animi consequatur
-          at vel ratione ipsum facere quibusdam et! Modi totam excepturi
-          voluptates id, vero deleniti ullam obcaecati eius sed, veritatis
-          necessitatibus recusandae, nemo autem neque fugiat quidem reiciendis?
-          Facilis necessitatibus accusamus neque doloremque laborum.`,
-    },
-    {
-      title: "lorem ipsum",
-      img: [{ img: "https://picsum.photos/1600/900", alt: "Lorem Picsum" }],
-      type: ["html", "javascript", "tailwind"],
-      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sapiente, 
-      quam quo exercitationem, culpa blanditiis, animi consequatur
-          at vel ratione ipsum facere quibusdam et! Modi totam excepturi
-          voluptates id, vero deleniti ullam obcaecati eius sed, veritatis
-          necessitatibus recusandae, nemo autem neque fugiat quidem reiciendis?
-          Facilis necessitatibus accusamus neque doloremque laborum.`,
-    },
-  ];
+  const projectList = useContext(ProjectsContext);
 
   return (
     <>
-      <Title title={1}>Projects</Title>
-      <div className="">
+      <Title title={1}>
+        <TypeWriter>Projects</TypeWriter>
+      </Title>
+      <div className="flex flex-col-reverse">
         {projectList.map((project, i) => {
           return (
             <section
               key={i}
-              className="my-16 first:my-0 bg-bg-light/50 p-8 rounded-2xl shadow-taf"
+              className="first:my-0 mb-16 bg-bg-light/50 p-8 backdrop-blur-xl rounded-2xl shadow-taf"
             >
               <div className="flex flex-row items-center">
-                <Title title={2}>{project.title}</Title>
-                <p className="text-3xl font-bold mx-3">|</p>
-                <Typebar types={project.type}></Typebar>
+                <Title title={2}>
+                  {project.title}|<Typebar types={project.type}></Typebar>
+                </Title>
               </div>
               <div className="flex justify-center">
                 <ImageCarousel images={project.img}></ImageCarousel>

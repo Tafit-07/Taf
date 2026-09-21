@@ -4,6 +4,8 @@ import TaFit from "../assets/TaFit.jpeg";
 import { useState, useEffect, useContext } from "react";
 import { SkillsContext } from "../App";
 import { IconsContext } from "../App";
+import { ProjectsContext } from "../App";
+import Typebar from "./Typebar";
 
 export default function CVElement() {
   const birth = new Date(2007, 9, 29, 13, 25);
@@ -14,6 +16,7 @@ export default function CVElement() {
   const [skew, setSkew] = useState({ x: 0, y: 0 });
   const skillList = useContext(SkillsContext);
   const icons = useContext(IconsContext);
+  const projectsList = useContext(ProjectsContext);
 
   useEffect(() => {
     window.addEventListener("mousemove", rotateElement);
@@ -41,23 +44,13 @@ export default function CVElement() {
 
   return (
     <>
-      <button
-        className="before:content-['['] after:content-[']'] after:text-sec font-jetbrains font-extrabold uppercase select-none transition before:text-sec hover:text-main 
-        text-text hover:after:text-text hover:before:text-text text-xl"
-        onClick={() => {
-          window.print();
-        }}
-      >
-        󱞆 Print/Download
-      </button>
-
       <div className="flex justify-center text-xs">
         <div
           style={{
             transform: `perspective(10000px) rotateY(${skew.x}deg) rotateX(${skew.y * -1}deg)`,
           }}
           id="page"
-          className="w-[21cm] aspect-210/297 z-1000 shadow-taf rounded-lg m-8 text-[#000] bg-[#fff] flex flex-col justify-between"
+          className="w-[21cm] aspect-210/297 z-1 shadow-taf rounded-lg m-8 text-[#000] bg-[#fff] flex flex-col justify-between"
         >
           <div
             id="pageBound"
@@ -71,7 +64,7 @@ export default function CVElement() {
                   alt="Tijn Fit"
                 />
                 <section className="grid drid-cols-1 gap-1">
-                  <h3 className="before:content-['##'] before:text-main before:mr-1 text-xl font-bold uppercase font-jetbrains">
+                  <h3 className="before:content-['##'] before:text-main text-xl font-bold uppercase font-jetbrains">
                     Personalia
                   </h3>
                   <p>
@@ -94,7 +87,7 @@ export default function CVElement() {
                 </section>
 
                 <section className="grid grid-cols-1 gap-1">
-                  <h3 className="before:content-['##'] before:text-main before:mr-1 text-xl font-bold uppercase font-jetbrains">
+                  <h3 className="before:content-['##'] before:text-main text-xl font-bold uppercase font-jetbrains">
                     Education
                   </h3>
                   <div>
@@ -106,11 +99,11 @@ export default function CVElement() {
                 </section>
 
                 <section className="grid grid-cols-1 gap-1">
-                  <h3 className="before:content-['##'] before:text-main before:mr-1 text-xl font-bold uppercase font-jetbrains">
+                  <h3 className="before:content-['##'] before:text-main text-xl font-bold uppercase font-jetbrains">
                     Skills
                   </h3>
                   <div className="grid grid-cols-1">
-                    <h4 className="before:content-['###'] before:text-main before:mr-1 text-md font-bold uppercase font-jetbrains">
+                    <h4 className="before:content-['###'] before:text-main text-md font-bold uppercase font-jetbrains">
                       Soft Skills
                     </h4>
 
@@ -125,7 +118,7 @@ export default function CVElement() {
                     </p>
                   </div>
                   <div className="grid grid-cols-1">
-                    <h4 className="before:content-['###'] before:text-main before:mr-1 text-md font-bold uppercase font-jetbrains">
+                    <h4 className="before:content-['###'] before:text-main text-md font-bold uppercase font-jetbrains">
                       Hard Skills
                     </h4>
                     {skillList.map((skill, i) => {
@@ -142,7 +135,7 @@ export default function CVElement() {
                 </section>
 
                 <section className="grid drid-cols-1 gap-1">
-                  <h3 className="before:content-['##'] before:text-main before:mr-1 text-xl font-bold uppercase font-jetbrains">
+                  <h3 className="before:content-['##'] before:text-main text-xl font-bold uppercase font-jetbrains">
                     Languages
                   </h3>
                   <p>
@@ -154,15 +147,63 @@ export default function CVElement() {
                 </section>
               </div>
             </div>
-            <div className="absolute h-full w-2/3 py-[1.5cm] pr-[1.5cm] pl-[1.5cm] top-0 right-0">
-              <Title title={1}>Tijn A Fit</Title>
-              <p>
-                I am a 3nd year front-end software developer in training. My
-                soft skills are problem solving, adaptability, and organisation.
-                I have experience with coding languages like HTML, CSS, and
-                JavaScript and frameworks like Vue, Tailwind, and Bootstrap. And
-                I'm eager to learn more.
-              </p>
+            <div className="absolute w-2/3 py-[1.5cm] pr-[1.5cm] pl-[1.5cm] grid grid-cols-3 gap-4 top-0 right-0">
+              <section className="col-span-3">
+                <h2 className="font-jetbrains font-bold uppercase text-6xl">
+                  <span className="text-main">#</span>Tijn.A.Fit
+                </h2>
+                <p className="text-lg font-jetbrains font-bold mt-1">
+                  Front-end Developer
+                </p>
+              </section>
+
+              <section className="col-span-3">
+                <Title title={2}>Profile</Title>
+                <p>
+                  I am a goal‑oriented and detail‑focused Web Development
+                  student with a strong interest in Front‑end development. I
+                  enjoy creating user‑friendly and visually appealing websites.
+                  I also love puzzling with code and discovering how software
+                  works behind the scenes. When building websites, I pay
+                  attention not only to the visual design but also to usability
+                  and the finer details. I am motivated to continue developing
+                  my technical skills and to keep challenging myself.
+                </p>
+              </section>
+              <section className="col-span-3">
+                <Title title={2}>Work Experience</Title>
+                <div>
+                  <h3 className="font-bold font-jetbrains text-lg">
+                    Action, Gieten - Stocker
+                  </h3>
+                  <div></div>
+                  <p className="font-jetbrains font-bold">2023 - Pressent</p>
+                </div>
+              </section>
+              <section className="col-span-3">
+                <Title title={2}>Projects</Title>
+                <div className="grid grid-cols-1 gap-2">
+                  {projectsList
+                    .slice(0)
+                    .reverse()
+                    .map((project, i) => {
+                      if (i < 3) {
+                        return (
+                          <div>
+                            <h3 className="font-bold font-jetbrains text-lg uppercase">
+                              <span className="text-main">###</span>
+                              {project.title}
+                            </h3>
+                            <div className="bg-dark rounded text-md w-fit">
+                              <Typebar types={project.type}></Typebar>
+                            </div>
+                            <p>{project.text}</p>
+                          </div>
+                        );
+                      }
+                    })}
+                </div>
+              </section>
             </div>
             <div
               id="pageFrame"
