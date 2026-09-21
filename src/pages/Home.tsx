@@ -2,59 +2,57 @@ import Title from "../components/Title";
 import Timer from "../components/Timer.tsx";
 import { IconsContext } from "../App.tsx";
 import { useContext } from "react";
+import { NavContext } from "../App.tsx";
+import { SkillsContext } from "../App.tsx";
+import TaFit from "../assets/TaFit.jpeg";
 
 export default function Home() {
-  const skillList = [
-    "html",
-    "javascript",
-    "typescript",
-    "react",
-    "css",
-    "tailwind",
-    "bootstrap",
-    "git",
-  ];
+  const nav = useContext(NavContext);
+  nav.setNavHidden(false);
+  const skillList = useContext(SkillsContext);
   const icons = useContext(IconsContext);
 
   return (
-    <div className="">
-      <section className="flex w-full">
-        <Title title={1}>Tijn A Fit</Title>
+    <div className="grid grid-cols-8 gap-8">
+      <section className="col-span-8 shadow-taf rounded-2xl p-8 bg-bg-light/50">
+        <div className="grid grid-cols-3 gap-8">
+          <div>
+            <img className="rounded-lg shadow-taf" src={TaFit} alt="Tijn Fit" />
+          </div>
+          <div className="col-span-2">
+            <Title title={2}>About me</Title>
+            <p className="w-fit">Name: Tijn. A. Fit </p>
+            <p className="w-fit">
+              Age: <Timer></Timer>
+            </p>
+            <p className="pt-2">
+              I am a goal‑oriented and detail‑focused Web Development student
+              with a strong interest in Front‑end development. I enjoy creating
+              user‑friendly and visually appealing websites. I also love
+              puzzling with code and discovering how software works behind the
+              scenes. When building websites, I pay attention not only to the
+              visual design but also to usability and the finer details. I am
+              motivated to continue developing my technical skills and to keep
+              challenging myself.
+            </p>
+          </div>
+        </div>
       </section>
-      <section>
-        <Title title={2}>About me</Title>
-        <p className="w-fit">Name: Tijn. A. Fit </p>
-        <p className="w-fit">
-          Age: <Timer></Timer>
-        </p>
-        <p className="pt-2">
-          I am a goal‑oriented and detail‑focused Web Development student with a
-          strong interest in Front‑end development. I enjoy creating
-          user‑friendly and visually appealing websites. I also love puzzling
-          with code and discovering how software works behind the scenes. When
-          building websites, I pay attention not only to the visual design but
-          also to usability and the finer details. I am motivated to continue
-          developing my technical skills and to keep challenging myself.
-        </p>
+      <section className="col-span-2">
+        <Title title={2}>Social</Title>
+        <div className="flex flex-col select-none">
+          <a
+            className="w-fit underline"
+            href="https://www.linkedin.com/in/tijn-fit-278a3339b/"
+          >
+            {icons["linkedin"].icon} Linkedin
+          </a>
+          <a className="w-fit underline" href="https://github.com/Tafit-07">
+            {icons["github"].icon} GitHub
+          </a>
+        </div>
       </section>
-      <section className="flex flex-col">
-        <Title title={2}>Contact</Title>
-        <a className="w-fit underline" href="mailto:tijn.a.fit@gmail.com">
-          <span className="mr-1 select-none">{icons["mail"].icon}</span>
-          Tijn.a.fit@gmail.com
-        </a>
-        <a
-          className="w-fit underline"
-          href="https://www.linkedin.com/in/tijn-fit-278a3339b/"
-        >
-          <span className="mr-1 select-none">{icons["linkedin"].icon}</span>
-          Linkedin
-        </a>
-        <a className="w-fit underline" href="https://github.com/Tafit-07">
-          <span className="mr-1 select-none">{icons["github"].icon}</span>GitHub
-        </a>
-      </section>
-      <section>
+      <section className="col-span-4">
         <Title title={2}>Skils</Title>
         {skillList.map((skill, i) => {
           return (

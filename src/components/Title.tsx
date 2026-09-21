@@ -13,7 +13,7 @@ export default function Title({
   }
   return (
     <h2
-      className={`title-${content} first:mt-0 mt-6 w-fit mb-1 font-bold before:text-main before:mr-1`}
+      className={`title-${content} uppercase w-fit font-jetbrains font-extrabold before:text-main before:mr-1`}
     >
       {children}
     </h2>

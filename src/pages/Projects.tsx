@@ -51,10 +51,13 @@ export default function Projects() {
   return (
     <>
       <Title title={1}>Projects</Title>
-      <div className="px-16">
+      <div className="">
         {projectList.map((project, i) => {
           return (
-            <section key={i} className="my-20 first:my-0">
+            <section
+              key={i}
+              className="my-16 first:my-0 bg-bg-light/50 p-8 rounded-2xl shadow-taf"
+            >
               <div className="flex flex-row items-center">
                 <Title title={2}>{project.title}</Title>
                 <p className="text-3xl font-bold mx-3">|</p>

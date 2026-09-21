@@ -29,10 +29,14 @@ export default function RoutesRouter() {
     document.title = "Not Found";
   }, [location]);
   return (
-    <div id="field" className="h-dvh">
+    <div>
       <Nav></Nav>
       <Cursor></Cursor>
-      <div className="max-w-[74rem] min-h-dvh bg-bg px-32 pt-24 py-8 border-x-4 border-sec mx-auto">
+      <div
+        id="main"
+        className="max-w-[74rem] static min-h-dvh shadow-taf bg-bg/70 backdrop-blur-lg px-32 pt-28 text-lg py-8
+      mx-auto"
+      >
         <Routes>
           {locationArray.map((item) => {
             return <Route path={item.path} element={item.element}></Route>;

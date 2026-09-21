@@ -9,6 +9,13 @@ export default function About() {
       <section className="flex flex-col font-medium text-lg text-text align-text-bottom">
         <a
           className="before:content-[''] transition before:text-lg before:text-ter-blue hover:text-ter-blue before:font-icons before:mr-2"
+          href="https://fonts.google.com/specimen/Inter"
+        >
+          Inter
+        </a>
+
+        <a
+          className="before:content-[''] transition before:text-lg before:text-ter-blue hover:text-ter-blue before:font-icons before:mr-2"
           href="https://www.jetbrains.com/lp/mono/"
         >
           JetBrainsMono

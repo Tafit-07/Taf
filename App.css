@@ -1,40 +1,64 @@
 @font-face {
   font-family: JetBrainsMono;
   src: url(./src/assets/fonts/Jet/JetBrainsMonoNerdFontPropo-Regular.ttf);
-  font-weight: 100;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./src/assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 @import "tailwindcss";
 
 @theme {
-  --color-bg-dark: #05080e;
-  --color-bg: #0b1016;
-  --color-sec: #27303c;
-  --color-text: #ddf0f0;
-  --color-text-disabled: #6e8383;
-  --color-main: #4544c2;
-  --color-ter-red: #f11e53;
-  --color-ter-green: #06d306;
-  --color-ter-yellow: #ffc000;
-  --color-ter-blue: #4544c4;
-  --color-ter-purple: #f31bd6;
-  --color-ter-cyan: #218ac2;
+  --color-bg-dark: var(--bg-dark);
+  --color-bg: var(--bg);
+  --color-bg-light: var(--bg-light);
+  --color-sec: var(--sec);
+  --color-text: var(--text);
+  --color-dark: #0b1016;
+  --color-text-dark: #ddf0f0;
+  --color-main: var(--color-ter-blue);
+  --color-ter-red: #e61932;
+  --color-ter-green: #6ce619;
+  --color-ter-yellow: #e6b019;
+  --color-ter-blue: #3b19e6;
+  --color-ter-purple: #e619e1;
+  --color-ter-cyan: #19a7e6;
   --color-ter-white: #ebebeb;
   --color-ter-black: #181e26;
-  --font-JetBrainsMono: "JetBrainsMono";
-  --animate-scale: scale 4s linear infinite;
+  --font-jetbrains: "JetBrainsMono";
+  --font-inter: Inter, "JetBrainsMono";
+  --animate-scale: scale 6s linear infinite;
+  --shadow-glass: 0 0 32px #fff;
+  --shadow-taf:
+    inset 0 1px 4px #ffffff30, 0 3px 6px #00000030, 0 6px 12px #00000015;
+  --animate-ping: ping 1.25s infinite;
+
+  @keyframes ping {
+
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
 
   @keyframes scale {
+
     0%,
     100% {
       transform: scale(1);
     }
+
     25% {
       transform: scale(0.8);
     }
+
     50% {
       transform: scale(1);
     }
+
     75% {
       transform: scale(1.2);
     }
@@ -42,25 +66,35 @@
 }
 
 .ter-red {
-  color: #f11e53;
+  color: var(--color-ter-red);
 }
+
 .ter-green {
-  color: #06d306;
+  color: var(--color-ter-green);
 }
+
 .ter-yellow {
-  color: #ffc000;
+  color: var(--color-ter-yellow);
 }
+
 .ter-blue {
-  color: #4544c2;
+  color: var(--color-ter-blue);
 }
+
 .ter-purple {
-  color: #f31bd6;
+  color: var(--color-ter-purple);
 }
+
 .ter-cyan {
-  color: #218ac2;
+  color: var(--color-ter-cyan);
 }
+
 .ter-white {
-  color: var(--color-state-100);
+  color: var(--color-ter-white);
+}
+
+.ter-black {
+  color: var(--color-ter-black);
 }
 
 * {
@@ -71,27 +105,34 @@
   content: "#";
   font-weight: bold;
 }
+
 .title-1 {
   font-size: var(--text-4xl);
 }
+
 .title-2::before {
   content: "##";
   font-weight: bold;
 }
+
 .title-2 {
   font-size: var(--text-3xl);
 }
+
 .title-3::before {
   content: "###";
   font-weight: bold;
 }
+
 .title-3 {
   font-size: var(--text-2xl);
 }
+
 .title-4::before {
   content: "####";
   font-weight: bold;
 }
+
 .title-4 {
   font-size: var(--text-xl);
 }

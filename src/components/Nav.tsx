@@ -1,10 +1,12 @@
 import NavLink from "./NavLink.tsx";
 import { useNavigate } from "react-router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { NavContext } from "../App.tsx";
 
 export default function Nav() {
   const navigate = useNavigate();
   const [top, setTop] = useState(false);
+  const nav = useContext(NavContext);
 
   useEffect(() => {
     const scrollEvent = () => {
@@ -19,18 +21,18 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed transition-[top] w-dvw hover:top-0 z-20 ${top ? "-top-20" : "top-0"}`}
+      className={`fixed transition-[top] z-1 w-dvw hover:top-0 ${nav.navHidden ? "hidden" : ""} ${top ? "-top-22" : "top-0"}`}
     >
       <div className="relative">
-        <div id="buffer" className="absolute translate-y-18 h-20 w-full"></div>
-        <div className="w-dvw z-20">
-          <div className="flex justify-between border-b-4 bg-bg border-sec p-4">
+        <div id="buffer" className="absolute translate-y-17 h-18 w-full"></div>
+        <div className="w-dvw">
+          <div className="flex justify-between bg-bg-light/70 backdrop-blur-lg p-4 shadow-taf rounded-full my-4 mx-auto max-w-[90rem]">
             <div className="text-3xl">
               <button
                 onClick={() => {
                   navigate("/");
                 }}
-                className="before:content-['<'] after:content-['/>'] before:text-main after:text-main"
+                className="before:content-['<'] after:content-['/>'] font-jetbrains font-extrabold before:text-main after:text-main"
               >
                 TAF_
               </button>

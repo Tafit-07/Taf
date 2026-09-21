@@ -1,0 +1,17 @@
+#top,
+nav #main {
+  position: static !important;
+  margin: 0 !important;
+  padding: 0;
+}
+
+nav {
+  display: none;
+}
+
+#main {
+  width: 100% !important;
+  position: static;
+}
+
+#notFound {}

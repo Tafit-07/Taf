@@ -14,7 +14,7 @@ export default function NavLink({
 
   if (window.location.pathname !== to) {
     active =
-      "before:content-['['] after:content-[']'] before:text-text hover:before:text-text-disabled after:text-text hover:after:text-text-disabled text-text-disabled hover:text-text";
+      "before:content-['['] after:content-[']'] before:text-sec hover:before:text-text after:text-sec hover:after:text-text text-text hover:text-main";
   } else {
     active =
       "before:content-['{'] after:content-['}'] before:text-main after:text-main";
@@ -27,7 +27,7 @@ export default function NavLink({
           window.scrollTo(0, 0);
           navigate(to);
         }}
-        className={`transition last:mr-0 mr-4 ${active}`}
+        className={`transition last:mr-0 mr-4 font-extrabold font-jetbrains ${active}`}
       >
         {children}
       </button>

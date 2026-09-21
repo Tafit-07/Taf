@@ -9,19 +9,19 @@ export default function Cursor() {
   useEffect(() => {
     const cursorTypes = {
       default: {
-        in: "h-[0.375rem] w-[0.375rem] rounded-full bg-text outline-2 outline-bg-dark",
+        in: "h-[0.375rem] w-[0.375rem] rounded-full bg-dark outline-1 outline-text-dark",
         out: "h-6 w-6 rounded-full border-2 border-main",
       },
       pointer: {
-        in: "h-[0.375rem] w-[0.375rem] rounded-full outline-2 bg-text outline-bg-dark animate-scale",
+        in: "h-[0.375rem] w-[0.375rem] rounded-full outline-1 bg-dark outline-text-dark animate-scale",
         out: "h-4 w-4 rounded-full border-2 border-main bg-radial from-main/0 to-main animate-ping",
       },
       text: {
-        in: "h-5 w-[0.1rem] rounded-full bg-text outline-2 outline-bg-dark",
+        in: "h-5 w-[0.1rem] rounded-full bg-dark outline-1 outline-text-dark",
         out: "h-9 w-3 rounded-md border-2 border-main/0",
       },
       scroll: {
-        in: "w-[0.375rem] h-[0.75rem] rounded-full outline-2 bg-text outline-bg-dark",
+        in: "w-[0.375rem] h-[0.75rem] rounded-full outline-1 bg-dark outline-text-dark",
         out: "h-1 w-1 rounded-full border-2 border-main/0",
       },
     };
@@ -77,7 +77,7 @@ export default function Cursor() {
 
   return (
     <>
-      <div id="cursor" className="static">
+      <div id="cursor" className="fixed z-10000">
         <div
           style={{
             transition: "all 300ms",
@@ -95,7 +95,7 @@ export default function Cursor() {
         ></div>
         <div
           style={{ left: `${cords.x}px`, top: `${cords.y + dir.mod}px` }}
-          className="fixed text-sm -translate-1/2"
+          className="fixed text-sm z-1000 -translate-1/2"
         >
           {dir.dir}
         </div>

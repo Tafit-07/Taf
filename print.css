@@ -18,7 +18,8 @@
     break-after: avoid;
     break-inside: avoid;
     break-before: avoid;
-    overflow: hidden;
+    filter: none;
+    transform: none;
   }
 
   nav,
@@ -52,16 +53,30 @@
   }
 
   body {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   #page {
     position: absolute;
     z-index: 1000;
-    width: 100%;
+    width: 21cm;
     top: 0;
     left: 0;
+    margin: 0;
+    border-radius: 0px;
+    box-shadow: none;
+    transform: perspective(0px) rotateX(0deg) rotateY(0deg) !important;
+  }
+
+  #pageFrame,
+  #pageBound {
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+  #pageFrame {
+    display: none;
   }
 
   #cursor {
