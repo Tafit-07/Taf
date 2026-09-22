@@ -126,7 +126,7 @@ export default function App() {
               >
                 <MainRouter></MainRouter>
               </div>
-              <div className="fixed top-0 bg-bg-dark bg-linear-to-t dark:bg-radial z-[-1] from-main/50 dark:from-main/50 to-bg h-[200dvh] dark:h-[500dvh] w-dvw"></div>
+              <div className="fixed top-0 bg-bg-dark bg-linear-to-t dark:bg-radial z-[-2] from-main/50 dark:from-main/50 to-bg h-[200dvh] dark:h-[500dvh] w-dvw"></div>
             </ProjectsContext.Provider>
           </SkillsContext.Provider>
         </NavContext.Provider>

@@ -4,7 +4,7 @@ import TypeWriter from "../components/TypeWriter";
 
 export default function About() {
   return (
-    <>
+    <div className="animate-page">
       <Title title={1}>
         <TypeWriter>About this site</TypeWriter>
       </Title>
@@ -37,6 +37,6 @@ export default function About() {
         </a>
       </section>
       <Dependencies></Dependencies>
-    </>
+    </div>
   );
 }

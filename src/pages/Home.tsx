@@ -16,7 +16,7 @@ export default function Home() {
   const icons = useContext(IconsContext);
 
   return (
-    <div className="grid grid-cols-8 gap-8">
+    <div className="grid grid-cols-8 gap-8 animate-page">
       <section className="col-span-8">
         <h1 className="hidden">Tijn.a.Fit</h1>
         <h2 className="text-7xl font-jetbrains font-bold flex">

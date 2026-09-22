@@ -31,7 +31,7 @@ export default function NavLink({
           window.scrollTo(0, 0);
           navigate(to);
         }}
-        className={`transition last:mr-0 mr-4 font-extrabold uppercase font-jetbrains ${active}`}
+        className={`transition last:mr-0 mr-4 font-extrabold hover:scale-160 py-4 uppercase font-jetbrains ${active}`}
       >
         {children}
       </button>

@@ -4,7 +4,7 @@ import TypeWriter from "../components/TypeWriter";
 
 export default function CV() {
   return (
-    <>
+    <div className="animate-page">
       <Title title={1}>
         <TypeWriter>curriculum vitae</TypeWriter>
       </Title>
@@ -27,6 +27,6 @@ export default function CV() {
         󱞆 Print/Download
       </button>
       <CVElement></CVElement>
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ export default function Projects() {
   const projectList = useContext(ProjectsContext);
 
   return (
-    <>
+    <div className="animate-page">
       <Title title={1}>
         <TypeWriter>Projects</TypeWriter>
       </Title>
@@ -33,6 +33,6 @@ export default function Projects() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
