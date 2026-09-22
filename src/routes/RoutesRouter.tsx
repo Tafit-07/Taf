@@ -7,6 +7,7 @@ import Nav from "../components/Nav";
 import Cursor from "../components/Cursor";
 import Projects from "../pages/Projects";
 import CV from "../pages/CV";
+import RadialNav from "../components/RadialNav";
 
 export default function RoutesRouter() {
   const location = useLocation();
@@ -30,11 +31,11 @@ export default function RoutesRouter() {
   }, [location]);
   return (
     <div>
-      <Nav></Nav>
+      <RadialNav></RadialNav>
       <Cursor></Cursor>
       <div
         id="main"
-        className="max-w-[74rem] min-h-dvh px-32 pt-28 text-lg py-8
+        className="max-w-[74rem] min-h-dvh px-32 pt-16 text-lg py-8
       mx-auto"
       >
         <Routes>

@@ -28,7 +28,7 @@ export default function CVElement() {
       const x = event.clientX;
       const y = event.clientY;
 
-      const pageX = rect.left + page.scrollWidth / 2;
+      const pageX = rect.left + page.scrollWidth;
       const pageY = rect.top + page.scrollHeight / 2;
 
       setSkew({

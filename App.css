@@ -32,10 +32,30 @@
   --font-inter: Inter, "JetBrainsMono";
   --animate-scale: scale 6s linear infinite;
   --animate-blink: blink 1.2s steps(1) infinite;
+  --animate-nav: nav 0.2s ease-in-out;
+  --animate-close: colse 0.2s ease-in-out;
   --shadow-glass: 0 0 32px #fff;
   --shadow-taf:
     inset 0 1px 4px #ffffff30, 0 3px 6px #00000030, 0 6px 12px #00000015;
   --animate-ping: ping 1.25s infinite;
+
+  @keyframes close {
+    100% {
+      transform: scale(0);
+    }
+
+    0% {
+      transform: scale(100%);
+    }
+  }
+
+  @keyframes nav {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {}
+  }
 
   @keyframes blink {
 

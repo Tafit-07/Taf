@@ -100,7 +100,7 @@ export default function ImageCarousel({
                   key={index}
 
                   className={`rounded shadow-taf font-bold transition-[aspect-ratio] mx-1 h-3
-                    ${index === imageIndex ? "aspect-16/9 bg-main text-text" : "aspect-1/1 bg-bg-light/80 text-bg"}`}
+                    ${index === imageIndex ? "aspect-16/9 bg-main text-text" : "aspect-1/1 bg-sec text-bg"}`}
                   onClick={() => setImageIndex(index)}
                 ></button>
               );

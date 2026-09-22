@@ -9,19 +9,19 @@ export default function Cursor() {
   useEffect(() => {
     const cursorTypes = {
       default: {
-        in: "h-[0.375rem] w-[0.375rem] rounded-full bg-dark outline-1 outline-text-dark",
+        in: "h-[0.375rem] w-[0.375rem] rounded-full bg-bg outline-1 outline-text",
         out: "h-6 w-6 rounded-full border-2 border-main",
       },
       pointer: {
-        in: "h-[0.375rem] w-[0.375rem] rounded-full outline-1 bg-dark outline-text-dark animate-scale",
+        in: "h-[0.375rem] w-[0.375rem] rounded-full outline-1 bg-bg outline-text animate-scale",
         out: "h-4 w-4 rounded-full border-2 border-main bg-radial from-main/0 to-main animate-ping",
       },
       text: {
-        in: "h-5 w-[0.1rem] rounded-full bg-dark outline-1 outline-text-dark",
+        in: "h-5 w-[0.1rem] rounded-full bg-bg outline-1 outline-text",
         out: "h-9 w-3 rounded-md border-2 border-main/0",
       },
       scroll: {
-        in: "w-[0.375rem] h-[0.75rem] rounded-full outline-1 bg-dark outline-text-dark",
+        in: "w-[0.375rem] h-[0.75rem] rounded-full outline-1 bg-bg outline-text",
         out: "h-1 w-1 rounded-full border-2 border-main/0",
       },
     };

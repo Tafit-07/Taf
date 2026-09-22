@@ -7,6 +7,7 @@ import { SkillsContext } from "../App.tsx";
 import TaFit from "../assets/TaFit.jpeg";
 import TypeWriter from "../components/TypeWriter.tsx";
 import CVElement from "../components/CVElement.tsx";
+import Button from "../components/Button.tsx";
 
 export default function Home() {
   const nav = useContext(NavContext);
@@ -43,6 +44,10 @@ export default function Home() {
               motivated to continue developing my technical skills and to keep
               challenging myself.
             </p>
+            <div className="flex">
+              <Button>test</Button>
+              <Button>test2</Button>
+            </div>
           </div>
         </div>
       </section>
@@ -62,18 +67,20 @@ export default function Home() {
       </section>
       <section className="col-span-4">
         <Title title={2}>Skils</Title>
-        {skillList.map((skill, i) => {
-          return (
-            <p className="w-fit" key={i}>
-              <span
-                className={`${icons[skill].color} text-lg select-none mr-1`}
-              >
-                {icons[skill].icon}
-              </span>
-              {icons[skill].name}
-            </p>
-          );
-        })}
+        <div className="grid grid-cols-1 gap-1">
+          {skillList.map((skill, i) => {
+            return (
+              <p className="w-fit bg-dark text-text-dark rounded px-1" key={i}>
+                <span
+                  className={`${icons[skill].color} text-lg select-none mr-1`}
+                >
+                  {icons[skill].icon}
+                </span>
+                {icons[skill].name}
+              </p>
+            );
+          })}
+        </div>
       </section>
       <section className="col-span-8"></section>
     </div>
